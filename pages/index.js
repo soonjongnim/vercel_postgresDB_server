@@ -36,7 +36,7 @@ export default function Home({ posts }) {
 
 // 서버에서 데이터를 가져오는 함수
 export async function getServerSideProps() {
-  const res = await fetch('/api/post'); // API 호출
+  const res = await fetch('https://soon9086postgresserver.vercel.app/api/post'); // API 호출
   const data = await res.json();
   console.log("Fetched data from API:", data); // API 응답 확인
   return {
