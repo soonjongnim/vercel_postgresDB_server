@@ -1,0 +1,14 @@
+vercel 실행방법
+터미널에서 D:\gitweb\sofa\backend> vercel link
+Vercel CLI 41.6.1
+? Set up “D:\gitweb\sofa\backend”? yes
+? Which scope should contain your project? soon9086's projects
+? Link to existing project? yes
+(해당 프로젝트)
+? What’s the name of your existing project? soon9086_postgres_server 
+✅  Linked to soon9086s-projects/soon9086_postgres_server (created .vercel)
+(env없을시 실행)
+PS D:\gitweb\sofa\backend> vercel env pull .env.development.local 
+
+
+개발 실행: yarn dev
