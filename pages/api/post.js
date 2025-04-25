@@ -1,11 +1,11 @@
 import { neon } from '@neondatabase/serverless';
+import { setCorsHeaders } from '../../utils/cors'; // CORS 설정 함수 가져오기
+
 const sql = neon(process.env.DATABASE_URL);
 
 export default async function handler(request, response) {
-  // CORS 헤더 추가
-  response.setHeader('Access-Control-Allow-Origin', '*'); // 모든 도메인 허용
-  response.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-  response.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  // CORS 헤더 설정
+  setCorsHeaders(response);
 
   if (request.method === 'OPTIONS') {
     return response.status(200).end(); // Preflight 요청 처리
